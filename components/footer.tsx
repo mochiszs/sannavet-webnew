@@ -33,8 +33,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Síguenos</h3>
             <div className="flex space-x-4">
-              <Link
-                href="https://facebook.com"
+            <Link
+                href="https://www.facebook.com/veterinariasannavet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#f7f3e6] transition-colors"
@@ -43,7 +43,7 @@ export default function Footer() {
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/veterinaria.sannavet/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#f7f3e6] transition-colors"
@@ -52,7 +52,7 @@ export default function Footer() {
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="https://tiktok.com"
+                href="https://www.tiktok.com/@veterinaria.sannavet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#f7f3e6] transition-colors"

@@ -17,15 +17,11 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1
-    setCurrentIndex(newIndex)
+    setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
   }
 
   const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1
-    const newIndex = isLastSlide ? 0 : currentIndex + 1
-    setCurrentIndex(newIndex)
+    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
   }
 
   const goToSlide = (slideIndex: number) => {
@@ -42,14 +38,23 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
   }, [currentIndex])
 
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
-      <Image
-        src={slides[currentIndex].url || "/placeholder.svg"}
-        alt={slides[currentIndex].alt}
-        fill
-        className="object-cover"
-        priority
-      />
+    <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
+      <div
+        className="flex transition-transform duration-700 ease-in-out w-full"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {slides.map((slide, index) => (
+          <div key={index} className="w-full flex-shrink-0 relative h-[300px] md:h-[400px] lg:h-[500px]">
+            <Image
+              src={slide.url}
+              alt={slide.alt}
+              fill
+              className="object-cover rounded-lg"
+              priority
+            />
+          </div>
+        ))}
+      </div>
 
       {/* Left Arrow */}
       <div className="absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer">
@@ -87,4 +92,3 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
     </div>
   )
 }
-

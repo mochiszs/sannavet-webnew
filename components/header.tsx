@@ -16,8 +16,14 @@ export default function Header() {
     <header className="bg-[#09465b] text-white">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
-        <Link href="/" className="flex items-center">
-           
+          <Link href="/" className="flex items-center">
+            <Image
+               src="/nuevasfotos/SANNA VET LOGO BLANCO_Mesa de trabajo 1.png"
+              alt="Logo Veterinaria"
+              width={180}
+              height={50}
+              className="h-12 w-auto"
+            />
           </Link>
 
           <button className="md:hidden focus:outline-none" onClick={toggleMenu}>

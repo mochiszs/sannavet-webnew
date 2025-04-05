@@ -12,7 +12,7 @@ export default function Nosotros() {
             <div>
               <h2 className="text-2xl font-bold mb-4 text-[#09465b]">Nuestra Historia</h2>
               <p className="text-[#09465b]/80 mb-4">
-                Fundada en 2005, nuestra clínica veterinaria nació con la misión de proporcionar atención médica de
+                Fundada en 2010, nuestra clínica veterinaria nació con la misión de proporcionar atención médica de
                 calidad a las mascotas de nuestra comunidad. Lo que comenzó como un pequeño consultorio ha crecido hasta
                 convertirse en un centro veterinario completo con servicios integrales.
               </p>
@@ -24,7 +24,7 @@ export default function Nosotros() {
             </div>
             <div className="order-first md:order-last">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/nuevasfotos/NUESTRA HISTORIA_Mesa de trabajo 1.jpg"
                 alt="Nuestra Historia"
                 width={600}
                 height={400}
@@ -36,7 +36,7 @@ export default function Nosotros() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
             <div className="order-last md:order-first">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/nuevasfotos/MISIÓN_Mesa de trabajo 1.jpg"
                 alt="Nuestra Misión"
                 width={600}
                 height={400}
@@ -73,7 +73,7 @@ export default function Nosotros() {
             </div>
             <div className="order-first md:order-last">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/nuevasfotos/VISIÓN_Mesa de trabajo 1.jpg"
                 alt="Nuestra Visión"
                 width={600}
                 height={400}
